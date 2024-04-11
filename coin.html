@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Return Journey</title>
+    <link rel="stylesheet" href="coin.css">
+
+</head>
+<body>
+    <button id="interestedButton">
+        Community!!
+    </button>
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="bolder">Welcome To our Community.</p>
+        <P>This community will help you to find travelers similar to you . You can connect with them and form teams , know about places , talk to experts and find people of similar interest . You can use this community and directly without login and your identity will be secured. <div class="italic">Community - <i>The Return Journey</i></div></P>
+        <button id="community"> Join Community</button>
+      </div>
+    </div>
+    <div id = "return_coins_Modal" class = "Modal">
+      <div class =  "modal-content-return">
+        <img id = "return_coins" src = "journey.png" alt = "return coins" width = "40%" height = "40%">
+        <div class = "count" style= "color: rgb(5, 38, 153);">0</div>
+      </div>
+    </div>
+    <script>
+// Get a reference to the button element
+const button = document.getElementById("interestedButton");
+
+// Get the modal element
+const modal = document.getElementById("popupModal");
+
+// Get the close button for the modal
+const closeBtn = modal.querySelector(".close");
+
+// Get the community button
+const community = modal.querySelector("#community");
+
+// When the user clicks the button, open the modal
+button.addEventListener("click", function() {
+  modal.style.display = "block";
+  community.style.display = "block"; // Make the community button visible
+});
+
+// When the user clicks on the close button, close the modal
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+  community.style.display = "none"; // Hide the community button when the modal is closed
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    community.style.display = "none"; // Hide the community button when the modal is closed
+  }
+});
+
+// By clicking on the community button
+const returnCoinsModal = document.getElementById("return_coins_Modal");
+    const count = returnCoinsModal.querySelector(".count");
+
+    // Initialize the coin count to 0
+    let coinCount = 0;
+
+    // Set initial count text
+    count.textContent = coinCount;
+
+    if (community) {
+                community.addEventListener("click", function() {
+                    // Increment the coin count when the community button is clicked
+                    coinCount++;
+                    count.textContent = coinCount; // Update the count display
+
+                    // Show the return coins modal
+                    returnCoinsModal.style.display = "block";
+
+                    // Open the community link in a new tab
+                    window.open("chatroom.html", "_blank");
+                });
+            }
+    </script>
+</body>
+</html>

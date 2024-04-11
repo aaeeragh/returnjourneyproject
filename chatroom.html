@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> The Return Journey community     </title>
+    <!-- Google fonts. -->
+    <link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'/>
+    <!-- Use font awesome icons. -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Use firebase app and database. -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <!-- The CSS and JS file must be declared after the things above-->
+    <link rel="stylesheet" href="chatroom.css"/>
+    <script type="text/javascript" src="chatroom.js"></script>
+
+  </head>
+  
+  <body>
+
+    <button id="chat_input_send">&times;</button>
+
+    
+    <div id = "return_coins_Modal" class = "Modal">
+      <div class =  "modal-content-return">
+        <img id = "return_coins" src = "journey.png" alt = "return coins" width = "40%" height = "40%">
+        <div class = "count" style= "color: rgb(5, 38, 153);">0</div>
+      </div>
+    </div>
+
+    <script>
+      const returnCoinsModal = document.getElementById("return_coins_Modal");
+    const count = returnCoinsModal.querySelector(".count");
+
+    // Initialize the coin count to 0
+    let coinCount = 0;
+
+    // Set initial count text
+    count.textContent = coinCount;
+
+    if (community) {
+                community.addEventListener("click", function() {
+                    // Increment the coin count when the community button is clicked
+                    coinCount++;
+                    count.textContent = coinCount; // Update the count display
+
+                    // Show the return coins modal
+                    returnCoinsModal.style.display = "block";
+
+                    // Open the community link in a new tab
+                    
+                });
+            }
+    </script>
+  </body>
+</html>

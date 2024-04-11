@@ -1,0 +1,22 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "Community room",
+  "main": "chatroom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaeeragh/returnjourneyproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaeeragh/returnjourneyproject/issues"
+  },
+  "homepage": "https://github.com/aaeeragh/returnjourneyproject#readme",
+  "dependencies": {
+    "openai": "^4.33.0"
+  }
+}
