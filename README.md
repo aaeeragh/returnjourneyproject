@@ -20,7 +20,7 @@ This will land you into the main chat room .
 
 Enjoy the company of your fellow travelers 
 
-## Code Structure Twiks:
+## Code Structure Twigs:
 The main code base is written in [coin.html](./blob/master/coin.html)
 All subsequent files are attached to it 
 
